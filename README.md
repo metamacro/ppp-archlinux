@@ -55,7 +55,10 @@ $ git clone https://github.com/input-output-hk/plutus-apps.git
 $ cd plutus-apps
 ```
 
-Based on the PPP week, checkout the desired commit.
+Based on the PPP week, checkout the desired commit:
+<pre>
+$ git checkout <i>ppp_week_n_commit_hash</i>
+</pre>
 
 Build the server:
 ```
