@@ -44,9 +44,9 @@ trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=
 ```
 
 Set your user as a trusted Nix user by editing `/etc/nix/nix.conf` and add the line:
-```
-trusted-users = your_ppp_user # change with your PPP user name
-```
+<pre>
+trusted-users = <i>your_ppp_user_name</i> # change with your PPP user name
+</pre>
 
 Clone the plutus-apps repository and change your working directory.
 
