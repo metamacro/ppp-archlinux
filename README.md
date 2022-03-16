@@ -95,6 +95,6 @@ $ GC_DONT_GC=1 npm run start
 
 Wait for the client to log `ℹ ｢wdm｣: Compiled successfully.`.
 
-### Usage
+## Usage
 
 Navigate to [https://0.0.0.0:8009/](https://0.0.0.0:8009/) in your browser.
