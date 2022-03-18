@@ -6,6 +6,7 @@ A setup guide for the Nix package manager and Cardano Plutus apps on Arch Linux 
 - remember to `git checkout` the *correct commit* based on the PPP week before building
 - due to `SIGSEGV` when building the server and client the `GC_DONT_GC=1` environment variable is used to turn off the garbage collection in Mono
 - `user` and `root` privileges will be denoted via the prefixes `$` and `#` respectively
+- to clear `/nix/store/` from all packages not in use by any user profile or by a currently running program run `nix-collect-garbage`
 
 ## Setup
 
@@ -25,7 +26,11 @@ Enable and start the `nix-daemon.service`:
 # systemctl enable --now nix-daemon.service
 ```
 
-Add your PPP `$USER` to the `nix-users` group.
+Add your PPP `$ $USER` to the `nix-users` group:
+<pre>
+# groupadd nix-users
+# usermod -aG nix-users <i>your_ppp_user_name</i> # replace with your PPP user name
+</pre>
 
 Add a channel and update it:
 ```
